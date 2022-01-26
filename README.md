@@ -1,28 +1,28 @@
 # BX Slider 활용법
 
 ### 기본 슬라이드 - Fade 효과
-```C
-	$('JQuery 선택자').bxSlider({
-		mode: 'fade',
-		pager: false
-	});
+```
+$('JQuery 선택자').bxSlider({
+  mode: 'fade',
+  pager: false
+});
 ```
 **Boolean 타입 입력할때 따옴표를 넣어서 string 타입으로 적용되지 않게 주의**
 ***
 ### 슬라이드 - Controls
-```C
-	$('JQuery 선택자').bxSlider({
-    controls: true,
-    nextText: TEXT 혹은 HTML 태그를 String 타입으로 입력,
+```
+$('JQuery 선택자').bxSlider({
+  controls: true,
+  nextText: TEXT 혹은 HTML 태그를 String 타입으로 입력,
 
-		prevText: ex) "<i class="fas fa-chevron-left></i>",
-		prevText: ex) "이전 슬라이드"
-	});
+  prevText: ex) "<i class="fas fa-chevron-left></i>",
+  prevText: ex) "이전 슬라이드"
+});
 ```
 **개발자도구로 클래스명 확인 후 CSS로 커스텀 가능**
 ***
 #### 슬라이드 - Custom Controls
-```C
+```
   <div class="slide_wrapper">
     <div class="custom_slider">
       <div>슬라이드 1</div>
