@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap");
+* { margin: 0; padding: 0; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+body { -webkit-font-smoothing: antialiased; background: radial-gradient(circle at 49% 48%, white 0%, #d9d9d9 100%); }
+
+#wrap { font-family: 'Noto Sans KR', sans-serif; width: 100%; max-width: 1200px; margin: 0 auto; }
+
+header h1 { padding: 4vw 0; font-size: 5vw; text-align: center; color: #333; }
+
+main section { margin: 3em 0; }
+
+main h2 { padding: 2vw 0; font-size: 2.5vw; text-align: center; color: #333; }
+
+main .basic_slider_wrapper { position: relative; width: 80%; margin: 0 auto; }
+
+main .basic_slider_wrapper.control .bx-controls-direction > a { display: block; position: absolute; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); padding: 10px 5px; font-size: 4vw; line-height: 1; color: #555; border: 1px solid #333; background: rgba(0, 0, 0, 0.1); }
+
+main .basic_slider_wrapper.control .bx-controls-direction > a.bx-prev { left: -6vw; }
+
+main .basic_slider_wrapper.control .bx-controls-direction > a.bx-next { right: -6vw; }
+
+main .basic_slider_wrapper .slider_control figure { text-align: center; }
+
+main .basic_slider_wrapper .slider_control figure > img { width: 100%; }
+
+main .basic_slider_wrapper .slider_control figure > figcaption { position: absolute; bottom: 20px; width: 100%; padding: 10px 0; font-size: 20px; font-weight: bold; color: #fff; background: rgba(0, 0, 0, 0.4); }
+
+main .custom_controls { position: relative; }
+
+main .custom_controls .controls > span > a { position: absolute; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); display: block; width: 6vw; height: 6vw; text-indent: -9999em; }
+
+main .custom_controls .controls > span > a.bx-next { background: url(../images/right.png) no-repeat; background-size: 100% 100%; right: -8vw; }
+
+main .custom_controls .controls > span > a.bx-prev { background: url(../images/left.png) no-repeat; background-size: 100% 100%; left: -8vw; }
