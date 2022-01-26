@@ -59,3 +59,41 @@ Step 2. CSS 스타일작업시 Selector의 자식 a 태그 선택 후 작업.
 Step 3. a 태그의 content에 텍스트가 자동생성되니 CSS의 text-indent 속성활용
 ```
 ***
+---
+## 멀티 슬라이드 - Multiple Slide
+
+```
+	$("JQuery 선택자").bxSlider({
+		minSlides: 1,        최소 슬라이드
+		maxSlides: 3,        최대 슬라이드
+		moveSlides: 1,       움직이는 슬라이드
+		slideWidth: 320,     슬라이드 너비 값
+		slideMargin: 30,     슬라이드 간격
+		shrinkItems: true    브라우저 너비에 맞게 반응형
+	});
+```
+---
+---
+## 활성화 슬라이드 - Active Slide
+```
+	$("JQuery 선택자").bxSlider({
+		mode: 'fade',
+		onSliderLoad: (currentIndex) => { 
+			슬라이더 로드 후 실행할 코드 작성 ;
+		},
+		onSlideAfter: $slideElement => {
+			다음 슬라이더 진행 후 실행할 코드 작성 ;
+		}
+	});
+```
+```  
+  onSliderLoad 옵션에는 함수를 작성해야하고 currentIndex 인자 활용으로 첫번째 슬라이더의 index 가져올수 있다.
+
+  onSlideAfter 옵션은 3가지의 인자를 활용 가능.
+  1. $slideElement : 현재의 슬라이드를 제이쿼리 오브젝트로 가져온다.
+  2. oldIndex : 이전 슬라이드의 index를 가져온다.
+  3. newIndex : 현재 슬라이드의 index를 가져온다.
+```
+**함수의 인자명은 바꿀수 없음**
+
+---

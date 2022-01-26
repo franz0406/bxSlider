@@ -25,4 +25,31 @@ $(function(){
 
 	});
 	
+	// 멀티 슬라이드 - Multiple Slide
+	$(".multiple_slider").bxSlider({
+		pager: false,
+		minSlides: 1,
+		maxSlides: 3,
+		moveSlides: 1,
+		slideWidth: 320,
+		slideMargin: 30,
+		shrinkItems: true
+	});
+
+	// 현재 활성화 된 슬라이드 - Active Slide
+	const activeSlideList = $(".active_slider > li");
+
+	$(".active_slider").bxSlider({
+		mode: 'vertical',
+		pager: false,
+		onSliderLoad: currentIndex => { 
+			activeSlideList.eq(currentIndex).addClass("active");
+		},
+		onSlideAfter: $slideElement => {
+			$slideElement.addClass("active").siblings().removeClass("active");
+		},
+		nextText:"Slide Up",
+		prevText:"Slide Down"
+	});
+
 });//document ready jquery 
