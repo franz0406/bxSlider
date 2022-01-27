@@ -52,3 +52,5 @@ main .active_slider_wrapper .active_slider > li > h3 { position: absolute; top: 
 main .active_slider_wrapper .bx-controls { text-align: center; }
 
 main .active_slider_wrapper .bx-controls a { margin: 0 10px; }
+
+main .option_slider_wrapper { width: 90%; margin: 0 auto; }
