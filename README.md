@@ -104,9 +104,9 @@ Public Methods 옵션 사용시 HTML과 CSS를 사용자가 마음껏 적용 후
 </div>
 ```
 ```javascript
-const Wrapper = $('.slider_wrap'),
-      Controls = Wrapper.find('.controls span'),
-      Pager = Wrapper.find('.pager span'),
+const wrapper = $('.slider_wrap'),
+      controls = Wrapper.find('.controls span'),
+      pager = Wrapper.find('.pager span'),
       auto = Wrapper.find('.auto span');
 
 let slider = $('.slider').bxSlider({ 
@@ -115,7 +115,7 @@ let slider = $('.slider').bxSlider({
   auto: true
 }); 
 
-menualControls.click(function(){
+Controls.click(function(){
   if( $(this).hasClass('prev') ){
     slider.goToPrevSlide();
   }else{
@@ -123,12 +123,12 @@ menualControls.click(function(){
   }
 });
 
-menualPager.click(function(){
+pager.click(function(){
   let idx = $(this).index();
   slider.goToSlide(idx);
 });
 
-menualAutoSlide.click(function(){
+auto.click(function(){
   if( $(this).hasClass('auto') ){
     slider.startAuto();
   }else{
