@@ -192,3 +192,38 @@ onSlideAfter 옵션은 3가지의 인자를 활용 가능.
 
 ---
 ---
+### Tap Slider
+
+##### Step 1. HTML
+```html
+<script src="https://제이쿼리 로드"></script>
+<script src="https://제이쿼리 UI 로드"></script>
+
+<div id="tabs">
+  <ul>
+    <li><a href="#tabs-1">텝메뉴 1</a></li>
+    <li><a href="#tabs-2">텝메뉴 2</a></li>
+    <li><a href="#tabs-3">텝메뉴 3</a></li>
+  </ul>
+  <div id="tabs-1">
+    <p>tabs-1 Contents</p>
+  </div>
+  <div id="tabs-2">
+    <p>tabs-2 Contents</p>
+  </div>
+  <div id="tabs-3">
+    <p>tabs-3 Contents</p>
+  </div>
+</div>
+```
+##### Step 1. JavaScript
+```javascript
+$(".tap_slide").bxSlider({
+		pager: false
+});
+
+$( ".tap_slider_wrapper" ).tabs();
+```
+tabs ui를 bxSlider 뒤에 작성해야한다.  
+tabs ui가 먼저 적용되면 활성화된 탭메뉴 외에는 전부 display:block; 처리되어 bxSlider가 적용이 안된다.  
+bxSlider를 먼저 모든 탭메뉴에 적용시킨 후 tabs ui를 사용하도록 한다. 

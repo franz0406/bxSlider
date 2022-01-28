@@ -176,4 +176,19 @@ main { // 메인
     margin: 0 auto;
   }
 
+  .tap_slider_wrapper {
+    width:70%;
+    margin: 0 auto;
+    ul {
+      display: flex;
+      list-style: none;
+      li {
+        margin: 0 10px;
+      }
+      a{
+        color:#444;
+      }
+    }
+  }
+
 }

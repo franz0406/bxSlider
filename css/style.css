@@ -54,3 +54,11 @@ main .active_slider_wrapper .bx-controls { text-align: center; }
 main .active_slider_wrapper .bx-controls a { margin: 0 10px; }
 
 main .option_slider_wrapper { width: 90%; margin: 0 auto; }
+
+main .tap_slider_wrapper { width: 70%; margin: 0 auto; }
+
+main .tap_slider_wrapper ul { display: -webkit-box; display: -ms-flexbox; display: flex; list-style: none; }
+
+main .tap_slider_wrapper ul li { margin: 0 10px; }
+
+main .tap_slider_wrapper ul a { color: #444; }

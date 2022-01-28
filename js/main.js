@@ -90,5 +90,14 @@ $(function(){
 		}
 	})// Public Methods ends
 
+	// 탭 슬라이드
+	const tapSlide = $(".tap_slide").bxSlider({
+		pager: false
+	});
+
+	$( ".tap_slider_wrapper" ).tabs();
+	
+	
+
 
 });//document ready jquery 
