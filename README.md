@@ -1,5 +1,5 @@
 # JQuery 슬라이드 플러그인 BX Slider 활용법
-###### https://franz0406.github.io/bxSlider/
+##### https://franz0406.github.io/bxSlider/
 
 
 ### 기본 슬라이드 - Fade 효과
@@ -25,34 +25,34 @@ $('JQuery 선택자').bxSlider({
 ***
 #### 슬라이드 - Custom Controls
 ```html
-  <div class="slide_wrapper">
-    <div class="custom_slider">
-      <div>슬라이드 1</div>
-      <div>슬라이드 2</div>
-      <div>슬라이드 3</div>
-      <div>슬라이드 4</div>
-    </div>
-    <div class="controls">
-      <span class="prev"></span>
-      <span class="next"></span>
-    </div>
+<div class="slide_wrapper">
+  <div class="custom_slider">
+    <div>슬라이드 1</div>
+    <div>슬라이드 2</div>
+    <div>슬라이드 3</div>
+    <div>슬라이드 4</div>
   </div>
+  <div class="controls">
+    <span class="prev"></span>
+    <span class="next"></span>
+  </div>
+</div>
 ```
 ```javascript
-	$('.custom_slider').bxSlider({
-    controls: true,
-		nextSelector: ".slide_wrapper .next",
-		prevSelector: ".slide_wrapper .prev"
-	});
+$('.custom_slider').bxSlider({
+  controls: true,
+  nextSelector: ".slide_wrapper .next",
+  prevSelector: ".slide_wrapper .prev"
+});
 ```
 
 
 HTML 작성시 웹접근성 고려하지 않아도 된다.
 ```html
-  <div class="controls">
-    <span class="prev"> <!-- 이곳에 a태그와 내용 prev 자동생성 --> </span>
-    <span class="next"> <!-- 이곳에 a태그와 내용 next 자동생성 --> </span>
-  </div>
+<div class="controls">
+  <span class="prev"> <!-- 이곳에 a태그와 내용 prev 자동생성 --> </span>
+  <span class="next"> <!-- 이곳에 a태그와 내용 next 자동생성 --> </span>
+</div>
 ```
 
 
@@ -153,28 +153,28 @@ Public Methods
 ## 멀티 슬라이드 - Multiple Slide
 
 ```javascript
-	$("JQuery 선택자").bxSlider({
-		minSlides: 1,        // 최소 슬라이드
-		maxSlides: 3,        // 최대 슬라이드
-		moveSlides: 1,       // 움직이는 슬라이드
-		slideWidth: 320,     // 슬라이드 너비 값
-		slideMargin: 30,     // 슬라이드 간격
-		shrinkItems: true    // 브라우저 너비에 맞게 반응형
-	});
+$("JQuery 선택자").bxSlider({
+  minSlides: 1,        // 최소 슬라이드
+  maxSlides: 3,        // 최대 슬라이드
+  moveSlides: 1,       // 움직이는 슬라이드
+  slideWidth: 320,     // 슬라이드 너비 값
+  slideMargin: 30,     // 슬라이드 간격
+  shrinkItems: true    // 브라우저 너비에 맞게 반응형
+});
 ```
 ---
 ---
 ## 활성화 슬라이드 - Active Slide
 ```javascript
-	$("JQuery 선택자").bxSlider({
-		mode: 'fade',
-		onSliderLoad: (currentIndex) => { 
-			슬라이더 로드 후 실행할 코드 작성 ;
-		},
-		onSlideAfter: $slideElement => {
-			다음 슬라이더 진행 후 실행할 코드 작성 ;
-		}
-	});
+$("JQuery 선택자").bxSlider({
+  mode: 'fade',
+  onSliderLoad: (currentIndex) => { 
+    슬라이더 로드 후 실행할 코드 작성 ;
+  },
+  onSlideAfter: $slideElement => {
+    다음 슬라이더 진행 후 실행할 코드 작성 ;
+  }
+});
 ```
 
 
@@ -206,23 +206,41 @@ onSlideAfter 옵션은 3가지의 인자를 활용 가능.
     <li><a href="#tabs-3">텝메뉴 3</a></li>
   </ul>
   <div id="tabs-1">
-    <p>tabs-1 Contents</p>
+    <h2>tap 1</h2>
+      <div class="tap_slide">
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+      </div>
   </div>
   <div id="tabs-2">
-    <p>tabs-2 Contents</p>
+    <h2>tap 2</h2>
+      <div class="tap_slide">
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+      </div>
   </div>
   <div id="tabs-3">
-    <p>tabs-3 Contents</p>
+    <h2>tap 3</h2>
+      <div class="tap_slide">
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+      </div>
   </div>
 </div>
 ```
 ##### Step 1. JavaScript
 ```javascript
 $(".tap_slide").bxSlider({
-		pager: false
+	pager: false
 });
 
-$( ".tap_slider_wrapper" ).tabs();
+$( ".tabs" ).tabs();
 ```
 tabs ui를 bxSlider 뒤에 작성해야한다.  
 tabs ui가 먼저 적용되면 활성화된 탭메뉴 외에는 전부 display:block; 처리되어 bxSlider가 적용이 안된다.  
